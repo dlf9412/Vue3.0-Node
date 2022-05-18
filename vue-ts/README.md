@@ -1,16 +1,54 @@
 # Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 准备工作
 
-## Recommended IDE Setup
+- 升级当前的 vue/cli 的版
+- 升级 node 版本在 12.0.0 以上
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+```js
+npm install -g @vue/cli //升级脚手架的版本--兼容Vue2.0+/3.0+
+//nodeJs 版本到node 官网下载
+```
 
-## Type Support For `.vue` Imports in TS
+## 项目初始化
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's Take Over mode by following these steps:
+- 使用 vite 进行脚手架的搭建
 
-1. Run `Extensions: Show Built-in Extensions` from VS Code's command palette, look for `TypeScript and JavaScript Language Features`, then right click and select `Disable (Workspace)`. By default, Take Over mode will enable itself if the default TypeScript extension is disabled.
-2. Reload the VS Code window by running `Developer: Reload Window` from the command palette.
+```js
+npm init vite-app <project-name>
+//或
+yarn create vite-app <project-name>
 
-You can learn more about Take Over mode [here](https://github.com/johnsoncodehk/volar/discussions/471).
+//进入项目
+cd <project-name>
+npm install
+npm run dev
+```
+
+## 开发准备
+
+- 安装相应的依赖
+
+```js
+npm install --save axios less ant-design-vue
+```
+
+- main.js 引入依赖并进行挂载
+
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router/index'
+import axios from 'axios'
+// import Antd from 'ant-design-vue'
+import 'ant-design-vue/dist/antd.css'
+
+const app = createApp(App)
+app.use(router).mount('#app')
+app.config.globalProperties.$axios = axios
+```
+
+## 开发
+
+- 配置相应的路由，进行路由跳转
+- 页面组件化开发，组件进行 DefineComponent 声明，通过 env.d.ts 文件

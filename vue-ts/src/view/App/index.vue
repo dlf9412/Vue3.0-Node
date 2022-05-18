@@ -6,6 +6,7 @@
   </div>
 </template>
 <script lang='ts'>
+import { onMounted } from '@vue/runtime-core'
 import {useRouter} from 'vue-router'
 
 export default{
@@ -15,9 +16,14 @@ export default{
     const routeLink=()=>{
       router.push('/')
     }
+
+    onMounted(() => {
+      console.log(888)
+    })
     return { //要使用到data,methods要进行抛出，外部才能使用
       routeLink
     }
   },
+  
 }
 </script>
