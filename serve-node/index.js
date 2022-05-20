@@ -7,13 +7,14 @@ const config=require('./action/config')
 const app=new Koa()
 const router=new Router()
 
-app.use(config)
+//设置允许跨域--这一步在前端做了，所以先注释掉
+// app.use(config)
 
 //解析request的body
 app.use(bodyParser())
 
 
-router.get('/',async (ctx,next)=>{
+router.get('/api',async (ctx,next)=>{
   ctx.response.body='111'
 })
 
