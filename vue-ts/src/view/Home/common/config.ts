@@ -8,5 +8,5 @@ export const headerRoute:Array<HeaderTag>=[{
   path:'/home/commonOption'
 },{
   name:'业务方案',
-  path:'/home/application'
+  path:'/home/business'
 }]

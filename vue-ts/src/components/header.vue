@@ -7,9 +7,12 @@
       {{item.name}}
     </span>
     </div>
-    <div>right</div>
+    <div>
+      <div class="user-logo"></div>
+    </div>
   </div>
 </template>
+
 <script setup lang='ts'>
 import {defineProps, onMounted} from 'vue'
 import {useRoute,useRouter} from 'vue-router'
@@ -32,14 +35,8 @@ function goto(path){
    })
 }
 
-onMounted(()=>{
-  console.log(props.tagRoute)
-})
-
-
-
-
 </script>
+
 <style lang="less">
 @import '@/common/css/index.less';
   .common-header{
@@ -61,6 +58,14 @@ onMounted(()=>{
         color: #1890ff;
         background: #e6f7ff;
       }
+    }
+    .user-logo{
+      background: url('@/assets/user.jpg') no-repeat 50%;
+        background-size: 100% 100%;
+        width: 44px;
+        height: 44px;
+        line-height: 40px;
+        border-radius: 100%;
     }
   }
 </style>

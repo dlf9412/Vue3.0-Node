@@ -11,6 +11,10 @@ export const home:Array<RouteRecordRaw>=[{
     path:'/home/application',
     name:'application',
     component:()=>import('@/view/Home/application.vue'),
+  },{
+    path:'/home/business',
+    name:'business',
+    component:()=>import('@/view/business/index.vue'),
   },
   ...commonOption
 ]

@@ -47,6 +47,7 @@ onMounted(()=>{
 
 
 </script>
+
 <style lang="less" scoped>
 @import '@/common/css/index.less';
 .ant-layout-header, .ant-layout-footer {
