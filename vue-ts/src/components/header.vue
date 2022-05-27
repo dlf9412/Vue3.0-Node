@@ -26,10 +26,10 @@ const props=defineProps({
   }
 })
 
-function pathCheck(path){
+function pathCheck(path:string){
   return path.includes(route.path)
 }
-function goto(path){
+function goto(path:string){
    router.push({
      path:path
    })
