@@ -10,7 +10,7 @@ export const home:Array<RouteRecordRaw>=[{
   children:[{
     path:'/home/application',
     name:'application',
-    component:()=>import('@/view/Home/application.vue'),
+    component:()=>import('@/view/application/index.vue'),
   },{
     path:'/home/business',
     name:'business',

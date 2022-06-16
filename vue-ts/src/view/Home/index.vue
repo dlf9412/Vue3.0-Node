@@ -24,7 +24,7 @@
 import axios from 'axios'
 import {useRouter} from 'vue-router'
 import {Layout,LayoutHeader,LayoutContent} from 'ant-design-vue'
-import Header from '../../components/header.vue'
+import Header from '@/components/header.vue'
 import { onMounted, reactive } from '@vue/runtime-core'
 import {headerRoute} from './common/config'
 const router=useRouter()

@@ -19,7 +19,11 @@ export default defineConfig({
         target:'http://localhost:3001',//实际请求地址
         changeOrigin:true,
         rewrite:(path)=>path.replace(/^\api/,'')
-      }
+      },
+      "/gwapi/v1": {
+        "target":"https://paastest.zhixueyun.com/",
+        "changeOrigin": true,
+      },
     }
   }
 })
