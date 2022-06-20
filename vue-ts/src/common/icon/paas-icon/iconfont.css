@@ -1,0 +1,506 @@
+@font-face {
+  font-family: "iconfonts"; /* Project id 2586876 */
+  src: url('iconfont.woff2?t=1655106865911') format('woff2'),
+       url('iconfont.woff?t=1655106865911') format('woff'),
+       url('iconfont.ttf?t=1655106865911') format('truetype');
+}
+
+.iconfonts {
+  font-family: "iconfonts" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 
+ * PaaS的icon类名叫做iconfonts 为避免与SaaS的icon冲突，前面加上.iconfonts来提升权重
+ * replace('.icon-', '.iconfonts.icon-')
+ */
+.iconfonts.icon-a-offscreen:before {
+  content: "\e625";
+}
+
+.iconfonts.icon-a-fullscreen1:before {
+  content: "\e626";
+}
+
+.iconfonts.icon-Delete:before {
+  content: "\e71f";
+}
+
+.iconfonts.icon-Add:before {
+  content: "\e720";
+}
+
+.iconfonts.icon-equal:before {
+  content: "\e771";
+}
+
+.iconfonts.icon-application:before {
+  content: "\e76d";
+}
+
+.iconfonts.icon-system:before {
+  content: "\e76e";
+}
+
+.iconfonts.icon-component:before {
+  content: "\e76f";
+}
+
+.iconfonts.icon-a-jarpackagemanagement:before {
+  content: "\e770";
+}
+
+.iconfonts.icon-code:before {
+  content: "\e760";
+}
+
+.iconfonts.icon-a-check2:before {
+  content: "\e749";
+}
+
+.iconfonts.icon-a-floatingwindow:before {
+  content: "\e74a";
+}
+
+.iconfonts.icon-button:before {
+  content: "\e74b";
+}
+
+.iconfonts.icon-header:before {
+  content: "\e74c";
+}
+
+.iconfonts.icon-manage:before {
+  content: "\e74d";
+}
+
+.iconfonts.icon-object-multiple:before {
+  content: "\e74e";
+}
+
+.iconfonts.icon-step:before {
+  content: "\e74f";
+}
+
+.iconfonts.icon-a-dividingline:before {
+  content: "\e750";
+}
+
+.iconfonts.icon-singleChoiceComponent:before {
+  content: "\e751";
+}
+
+.iconfonts.icon-checkComponent:before {
+  content: "\e752";
+}
+
+.iconfonts.icon-form:before {
+  content: "\e753";
+}
+
+.iconfonts.icon-text:before {
+  content: "\e754";
+}
+
+.iconfonts.icon-footer:before {
+  content: "\e755";
+}
+
+.iconfonts.icon-switch:before {
+  content: "\e756";
+}
+
+.iconfonts.icon-a-uploadimage:before {
+  content: "\e757";
+}
+
+.iconfonts.icon-a-richtext:before {
+  content: "\e758";
+}
+
+.iconfonts.icon-choose:before {
+  content: "\e759";
+}
+
+.iconfonts.icon-a-dropdown-single:before {
+  content: "\e75a";
+}
+
+.iconfonts.icon-text-short:before {
+  content: "\e75b";
+}
+
+.iconfonts.icon-text-long:before {
+  content: "\e75c";
+}
+
+.iconfonts.icon-object-single:before {
+  content: "\e75d";
+}
+
+.iconfonts.icon-banner:before {
+  content: "\e75e";
+}
+
+.iconfonts.icon-a-singlecard:before {
+  content: "\e75f";
+}
+
+.iconfonts.icon-divide:before {
+  content: "\e702";
+}
+
+.iconfonts.icon-Subtract:before {
+  content: "\e700";
+}
+
+.iconfonts.icon-close:before {
+  content: "\e701";
+}
+
+.iconfonts.icon-add2:before {
+  content: "\e6fc";
+}
+
+.iconfonts.icon-left-bracket:before {
+  content: "\e6fd";
+}
+
+.iconfonts.icon-right-bracket:before {
+  content: "\e6fe";
+}
+
+.iconfonts.icon-comma:before {
+  content: "\e6ff";
+}
+
+.iconfonts.icon-assignment:before {
+  content: "\e6fb";
+}
+
+.iconfonts.icon-formula:before {
+  content: "\e6fa";
+}
+
+.iconfonts.icon-shujucaozuo:before {
+  content: "\e61d";
+}
+
+.iconfonts.icon-fuwujiedian2:before {
+  content: "\e61c";
+}
+
+.iconfonts.icon-bianliangfuzhi:before {
+  content: "\e61a";
+}
+
+.iconfonts.icon-tuozhuai1:before {
+  content: "\e619";
+}
+
+.iconfonts.icon-yingyong-shujukanban1:before {
+  content: "\e615";
+}
+
+.iconfonts.icon-shejiqi-tianjia:before {
+  content: "\e60d";
+}
+
+.iconfonts.icon-sousuo1:before {
+  content: "\e60c";
+}
+
+.iconfonts.icon-shezhi2:before {
+  content: "\e60a";
+}
+
+.iconfonts.icon-fenzhitianjia:before {
+  content: "\e624";
+}
+
+.iconfonts.icon-fuzhi1:before {
+  content: "\e609";
+}
+
+.iconfonts.icon-suoxiao1:before {
+  content: "\e620";
+}
+
+.iconfonts.icon-fangda2:before {
+  content: "\e623";
+}
+
+.iconfonts.icon-shanchu2:before {
+  content: "\e622";
+}
+
+.iconfonts.icon-yingyong-xitong:before {
+  content: "\e621";
+}
+
+.iconfonts.icon-bianji1:before {
+  content: "\e608";
+}
+
+.iconfonts.icon-caidan:before {
+  content: "\e60b";
+}
+
+.iconfonts.icon-guanbi1:before {
+  content: "\e60e";
+}
+
+.iconfonts.icon-fuwei:before {
+  content: "\e60f";
+}
+
+.iconfonts.icon-liebiaoshouqi:before {
+  content: "\e610";
+}
+
+.iconfonts.icon-xialajiantou-zhankai:before {
+  content: "\e611";
+}
+
+.iconfonts.icon-shujiegou-shouqi:before {
+  content: "\e612";
+}
+
+.iconfonts.icon-shujiegou-zhankai:before {
+  content: "\e613";
+}
+
+.iconfonts.icon-tianjia1:before {
+  content: "\e614";
+}
+
+.iconfonts.icon-yingyong-kaoshi:before {
+  content: "\e616";
+}
+
+.iconfonts.icon-liebiaozhankai:before {
+  content: "\e617";
+}
+
+.iconfonts.icon-yingyong-zhuantiguanli:before {
+  content: "\e618";
+}
+
+.iconfonts.icon-yingyong-biaozhunpeixun:before {
+  content: "\e61b";
+}
+
+.iconfonts.icon-fenzhitiaojian:before {
+  content: "\e600";
+}
+
+.iconfonts.icon-xiaoxijiedian:before {
+  content: "\e604";
+}
+
+.iconfonts.icon-fuwujiedian:before {
+  content: "\e601";
+}
+
+.iconfonts.icon-jieshu:before {
+  content: "\e602";
+}
+
+.iconfonts.icon-jiaobenjiedian:before {
+  content: "\e603";
+}
+
+.iconfonts.icon-fanhuijiedian:before {
+  content: "\e605";
+}
+
+.iconfonts.icon-kaishi:before {
+  content: "\e606";
+}
+
+.iconfonts.icon-yonghuhuodong:before {
+  content: "\e607";
+}
+
+.iconfonts.icon-renyuan:before {
+  content: "\e6e9";
+}
+
+.iconfonts.icon-shijian:before {
+  content: "\e6ea";
+}
+
+.iconfonts.icon-riqi:before {
+  content: "\e6eb";
+}
+
+.iconfonts.icon-duoxuanzu:before {
+  content: "\e6ec";
+}
+
+.iconfonts.icon-danxuanzu:before {
+  content: "\e6ed";
+}
+
+.iconfonts.icon-shu1:before {
+  content: "\e6ee";
+}
+
+.iconfonts.icon-biaoge:before {
+  content: "\e6ef";
+}
+
+.iconfonts.icon-bumen:before {
+  content: "\e6f0";
+}
+
+.iconfonts.icon-fujian:before {
+  content: "\e6f1";
+}
+
+.iconfonts.icon-tupian:before {
+  content: "\e6f2";
+}
+
+.iconfonts.icon-kaiguan:before {
+  content: "\e6f3";
+}
+
+.iconfonts.icon-buju1:before {
+  content: "\e6f4";
+}
+
+.iconfonts.icon-fuwenben:before {
+  content: "\e6f5";
+}
+
+.iconfonts.icon-biaoqian:before {
+  content: "\e6f6";
+}
+
+.iconfonts.icon-buzhou:before {
+  content: "\e6f7";
+}
+
+.iconfonts.icon-kapian:before {
+  content: "\e6f8";
+}
+
+.iconfonts.icon-fenge:before {
+  content: "\e6f9";
+}
+
+.iconfonts.icon-duoxuan:before {
+  content: "\e6cd";
+}
+
+.iconfonts.icon-danxuan:before {
+  content: "\e6ce";
+}
+
+.iconfonts.icon-shu:before {
+  content: "\e6cf";
+}
+
+.iconfonts.icon-wenbenyu:before {
+  content: "\e6d0";
+}
+
+.iconfonts.icon-duoxuanxialadanxuankuang:before {
+  content: "\e6d1";
+}
+
+.iconfonts.icon-shouye:before {
+  content: "\e6d2";
+}
+
+.iconfonts.icon-shuzishurukuang:before {
+  content: "\e6d3";
+}
+
+.iconfonts.icon-jiekou:before {
+  content: "\e6d4";
+}
+
+.iconfonts.icon-wenbenkuang:before {
+  content: "\e6d5";
+}
+
+.iconfonts.icon-liuchengtu:before {
+  content: "\e6d6";
+}
+
+.iconfonts.icon-zujian:before {
+  content: "\e6d7";
+}
+
+.iconfonts.icon-bianji:before {
+  content: "\e6d8";
+}
+
+.iconfonts.icon-yingyong:before {
+  content: "\e6d9";
+}
+
+.iconfonts.icon-jiantou1:before {
+  content: "\e6da";
+}
+
+.iconfonts.icon-jiantou2:before {
+  content: "\e6db";
+}
+
+.iconfonts.icon-bofang:before {
+  content: "\e6dc";
+}
+
+.iconfonts.icon-zanting:before {
+  content: "\e6dd";
+}
+
+.iconfonts.icon-buju:before {
+  content: "\e6de";
+}
+
+.iconfonts.icon-peizhi:before {
+  content: "\e6df";
+}
+
+.iconfonts.icon-shezhi:before {
+  content: "\e6e0";
+}
+
+.iconfonts.icon-shanchu:before {
+  content: "\e6e1";
+}
+
+.iconfonts.icon-zhankai:before {
+  content: "\e6e2";
+}
+
+.iconfonts.icon-tuodong:before {
+  content: "\e6e3";
+}
+
+.iconfonts.icon-guanbi2:before {
+  content: "\e6e4";
+}
+
+.iconfonts.icon-yulan:before {
+  content: "\e6e5";
+}
+
+.iconfonts.icon-xialaduoxuan:before {
+  content: "\e6e6";
+}
+
+.iconfonts.icon-guanbi:before {
+  content: "\e6e7";
+}
+
+.iconfonts.icon-tianjia:before {
+  content: "\e6e8";
+}
+

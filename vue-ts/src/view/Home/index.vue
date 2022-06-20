@@ -59,7 +59,7 @@ onMounted(()=>{
   padding-right: 30px;
 }
 .home-index{
-  height: 100%;
+  min-height: 100%;
   /deep/ .ant-layout{
     height: 100%;
   }

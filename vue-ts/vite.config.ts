@@ -1,11 +1,19 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
+import {createSvgIconsPlugin} from 'vite-plugin-svg-icons'
 
 // 项目相关的配置都在这里，包括文件夹别名、跨域、自动打开浏览器，设置启动的端口等等
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    createSvgIconsPlugin({
+      // 指定需要缓存的图标文件夹
+      iconDirs: [path.resolve(process.cwd(), 'src/common/icons')],
+      // 指定symbolId格式
+      symbolId: 'icon-[name]',
+  })],
   resolve:{
     alias:{
       '@':path.resolve(__dirname,'src')
@@ -25,5 +33,6 @@ export default defineConfig({
         "changeOrigin": true,
       },
     }
-  }
+  },
+  
 })

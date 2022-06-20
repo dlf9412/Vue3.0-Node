@@ -18,7 +18,7 @@
       </div>
     </div>
     <!-- 卡片 -->
-    <card :appName="appName"/>
+    <card :appName="appName" :cardList='cardList' ref="childCard"/>
     
     
   </div>
@@ -31,19 +31,26 @@ import {SearchOutlined,SettingOutlined} from '@ant-design/icons-vue'
 import card from './card.vue'
 import {selectAppliction} from '@/serve/application'
 
-const data=reactive({
-  appName:''
-})
-const {appName}=toRefs(data)
+//子组件
+const childCard=ref(null)
+
+const appName=ref('')
+const cardList=reactive([])
+
 
 const searchApp=function(){
-  console.log(appName,data)
+  // console.log(appName.value,cardList,data,childCard.value)
+  childCard.value?.sendData()
 }
 
 async function initData(){
   let res=await selectAppliction()
-    if(res.code===0) {
-    const cardList=reactive(res)
+  let {code,data}=res.data
+  if(code===0) {
+    // cardList=data.records
+    data.records.forEach(item=>{
+      cardList.push(item)
+    })
   }
 }
 
