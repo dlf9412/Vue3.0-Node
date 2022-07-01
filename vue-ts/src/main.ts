@@ -6,6 +6,7 @@ import axios from 'axios'
 import 'ant-design-vue/dist/antd.css'
 import '@/common/icon/paas-icon/iconfont.css';
 import '@/common/icon/icons/iconfont.css';
+import '../public/iconfont.js'
 
 const app=createApp(App)
 app.use(router).mount('#app')
