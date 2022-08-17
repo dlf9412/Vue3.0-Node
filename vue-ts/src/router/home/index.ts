@@ -7,10 +7,16 @@ export const home:Array<RouteRecordRaw>=[{
   name:'Home',
   component:()=>import('@/view/Home/index.vue'),
   redirect:'/home/application',
+  meta:{
+    title:'首页'
+  },
   children:[{
     path:'/home/application',
     name:'application',
     component:()=>import('@/view/application/index.vue'),
+    meta:{
+      title:'应用中心'
+    },
   },{
     path:'/home/business',
     name:'business',

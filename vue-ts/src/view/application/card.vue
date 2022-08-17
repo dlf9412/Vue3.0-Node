@@ -27,7 +27,6 @@ const props=defineProps({
   cardList:Object
 })
 
-console.log(props.appName,props.cardList,props)
 
 function sendData(){
   console.log(props.appName,props.cardList,props)
