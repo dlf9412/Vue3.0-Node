@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-10-24T07:06:47.272Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="M-u1lLi3cvx4STvWfBwI" version="20.2.8" type="github">
+<mxfile host="app.diagrams.net" modified="2022-10-24T10:09:24.615Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36" etag="xAzP26vkHy_3yO5JNsoN" version="20.2.8" type="github">
   <diagram id="UFjDRJjkYuPnafZuLWR5" name="第 1 页">
     <mxGraphModel dx="1422" dy="754" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
       <root>
@@ -198,6 +198,18 @@
             <mxPoint x="60" y="660" as="sourcePoint" />
             <mxPoint x="60" y="530" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="TMu0yX56AND41cWm_Km8-103" value="add.vue" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="310" y="510" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="TMu0yX56AND41cWm_Km8-104" value="eventsTool.emit(&#39;miniMapRedraw&#39;)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="TMu0yX56AND41cWm_Km8-103">
+          <mxGeometry x="40" y="50" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TMu0yX56AND41cWm_Km8-105" value="eventsTool.emit(&#39;recordUodoRedo&#39;)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="TMu0yX56AND41cWm_Km8-103">
+          <mxGeometry x="40" y="95" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="TMu0yX56AND41cWm_Km8-106" value="updateNodeData" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=90;" vertex="1" parent="TMu0yX56AND41cWm_Km8-103">
+          <mxGeometry x="-40" y="65" width="110" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
