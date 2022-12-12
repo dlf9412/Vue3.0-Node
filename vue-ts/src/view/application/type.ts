@@ -1,3 +1,4 @@
+// 单条卡片数据
 interface appListSingle{
   categoryId:Number;
   code:String;
@@ -18,7 +19,7 @@ interface appListSingle{
   useFor:Number
 }
 
-
+// 应用分类
 export interface cardListObj{
   appList:Array<appListSingle>;
   code:String;
@@ -34,3 +35,24 @@ export interface cardListObj{
   updateTime:String
 }
 
+export interface FromItemAttr{
+  label:string,
+  name:string,
+  rules:Array<object>,
+}
+// 添加自定义应用fromitem配置
+export interface FromItem{
+  attr:FromItemAttr,
+  type:any,
+  componentBind:Object
+}
+// 添加自定义应用from数据
+export interface FormState{
+  appCode:string,
+  appName:string,
+  appIcon:string,
+  appClass:string,
+  appDescription:string,
+  appGroup:string
+
+}

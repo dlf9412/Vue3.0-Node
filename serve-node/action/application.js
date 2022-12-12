@@ -1,5 +1,6 @@
 const application=require('../json/application')
-
+const parseUrl=require('../common/index')
+const {cloneDeep}=require('lodash')
 
 /**
  * 查询
@@ -14,8 +15,16 @@ const selectHome=(ctx,body)=>{
  * @param {*} ctx 上下文
  * @param {*} next 下一个中间件
  */
-const selectAppCard=(ctx,next)=>{
-  ctx.body=application
+const selectAppCard=async (ctx,next)=>{
+  let body={data:{records}}=cloneDeep(application)
+  let {appName}=ctx.query
+  if(!!appName){
+    body.data.records=records.map(i=>{
+        i.appList=i.appList.filter(j=>j.label.includes(appName))
+        return i
+    })
+  }
+  ctx.body=body
 }
 
 

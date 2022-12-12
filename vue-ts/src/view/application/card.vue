@@ -26,11 +26,12 @@ const props=defineProps({
   appName:String,
   cardList:Object
 })
+console.log(props.appName)
+
 
 
 function sendData(){
-  console.log(props.appName,props.cardList,props)
-  console.log(props.cardList)
+
 }
 
 //父组件要使用子组件的方法，必须通过defineExpose暴露给父组件

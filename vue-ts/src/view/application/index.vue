@@ -2,14 +2,13 @@
   <div class="app-entry">
     <!-- 头部 -->
     <div class="app-entry-header">
-      <a-input v-model="appName" class="app-entry-header-l" placeholder="搜索应用" >
+      <a-input v-model:value="appName" class="app-entry-header-l" placeholder="搜索应用" allow-clear @change="changeAppName">
         <template #suffix>
-            <search-outlined style="color: rgba(0, 0, 0, 0.45)" @click="searchApp"/>
+            <search-outlined style="color: rgba(0, 0, 0, 0.45)" @click="selectApp"/>
         </template>
       </a-input>
       <div class="app-entry-header-r">
         <a-button type="primary" @click="addVisible=true">新增自定义应用</a-button>
-        <a-button>导入应用</a-button>
         <a-button>
           <template #icon>
             <setting-outlined />
@@ -25,40 +24,46 @@
   </div>
 </template>
 <script setup lang='ts'>
-import { reactive, ref, toRefs } from '@vue/reactivity'
+import { reactive, ref, toRefs,toRef,computed } from '@vue/reactivity'
 import { onMounted, watchEffect } from '@vue/runtime-core'
 import {Input as aInput,Button as aButton }  from 'ant-design-vue'
 import {SearchOutlined,SettingOutlined} from '@ant-design/icons-vue'
 import card from './card.vue'
 import {selectAppliction} from '@/serve/application'
 import add from './add.vue'
+import {cardListObj} from './type'
+import type { Ref } from 'vue'
 
-//子组件
+const appName:Ref<string>=ref('')
+const addVisible:Ref<boolean>=ref(false)
+let cardList:Array<cardListObj>=reactive([])
+// 子组件事件触发
 const childCard=ref(null)
+const reactiveVar=reactive({
+  value1:1
+})
 
-const appName=ref('')
-const addVisible=ref(false)
-const cardList=reactive([])
-
-
-const searchApp=function(){
-  // console.log(appName.value,cardList,data,childCard.value)
-  childCard.value?.sendData()
-}
-
-async function initData(){
-  let res=await selectAppliction()
+// 数据初始化
+async function selectApp(){
+  cardList.length=0
+  let res=await selectAppliction({
+    appName:appName.value||''
+  })
   let {code,data}=res.data
   if(code===0) {
-    // cardList=data.records
-    data.records.forEach(item=>{
+    data.records.forEach((item:cardListObj)=>{
       cardList.push(item)
     })
   }
 }
+// 搜索
+function changeAppName(){
+  if(!appName.value)selectApp()
+}
+
 
 onMounted(()=>{
-  initData()
+  selectApp()
 })
 
 </script>
