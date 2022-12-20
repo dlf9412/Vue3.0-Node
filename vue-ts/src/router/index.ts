@@ -1,15 +1,18 @@
 import {createRouter,createWebHistory,RouteRecordRaw,Router} from 'vue-router'
 import {home} from './home/index'
+import {login} from './login/index'
+import {app} from './app/index'
 
 // 定义一些路由
 // 每个路由都需要映射到一个组件。
 const routes:Array<RouteRecordRaw>=[
   ...home,
+  ...login,
   {
-  path:'/app',
-  name:'App',
-  component:()=>import('@/view/App/index.vue')
-}]
+    path:'/',
+    name:'/',
+    redirect:'/login'
+  }]
 
 // 创建路由实例并传递 `routes` 配置
 const router:Router=createRouter({

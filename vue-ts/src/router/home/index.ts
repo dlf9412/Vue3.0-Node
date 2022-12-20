@@ -3,7 +3,7 @@ import {commonOption} from './commomOption'
 
 
 export const home:Array<RouteRecordRaw>=[{
-  path:'/',
+  path:'/home',
   name:'Home',
   component:()=>import('@/view/Home/index.vue'),
   redirect:'/home/application',

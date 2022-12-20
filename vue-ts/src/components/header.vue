@@ -20,10 +20,7 @@ import {useRoute,useRouter} from 'vue-router'
 const route=useRoute()
 const router=useRouter()
 const props=defineProps({
-  tagRoute:{
-    type:Array,
-    default:[]
-  }
+  tagRoute:Array as any
 })
 
 function pathCheck(path:string){

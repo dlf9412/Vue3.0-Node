@@ -24,7 +24,7 @@ export default defineConfig({
     port:8000,//启动端口
     proxy:{//设置代理
       '/api':{
-        target:'http://localhost:3001',//实际请求地址
+        target:'http://localhost:6060',//实际请求地址
         changeOrigin:true,
         rewrite:(path)=>path.replace(/^\api/,'')
       },
