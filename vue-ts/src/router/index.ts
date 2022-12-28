@@ -21,4 +21,9 @@ const router:Router=createRouter({
   routes:routes
 })
 
+router.beforeEach((to:any,from,next)=>{
+  window.document.title = to.meta.title||''
+  next()
+})
+
 export default router

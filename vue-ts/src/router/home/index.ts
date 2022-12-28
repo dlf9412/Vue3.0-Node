@@ -13,7 +13,7 @@ export const home:Array<RouteRecordRaw>=[{
   children:[{
     path:'/home/application',
     name:'application',
-    component:()=>import('@/view/application/index.vue'),
+    component:()=>import('@/view/Home/Application/index.vue'),
     meta:{
       title:'应用中心'
     },
