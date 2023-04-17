@@ -20,6 +20,11 @@ interface loginMes{
   username:string,
   password:string
 }
+interface resType{
+  code:number,
+  message:string
+}
+
 const router = useRouter()
 const inputStyle={
   width:'400px',
@@ -31,7 +36,7 @@ const loginMes=reactive<loginMes>({
 })
 
 async function gotoApp(){
-  const {data}=await login(loginMes)
+  const data =await login(loginMes)
   if(data.code===200){
     router.push('/home')
   }
