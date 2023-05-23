@@ -21,7 +21,6 @@
   </div>
 </template>
 <script setup lang='ts'>
-import axios from 'axios'
 import {useRouter} from 'vue-router'
 import {Layout,LayoutHeader,LayoutContent} from 'ant-design-vue'
 import Header from '@/components/header.vue'
@@ -38,10 +37,6 @@ const saasConfig=reactive({
 const routeClick=()=>{
   router.push('/app')
 }
-
-axios.get('/api').then((res)=>{
-  console.log(res)
-})
 onMounted(()=>{
 })
 

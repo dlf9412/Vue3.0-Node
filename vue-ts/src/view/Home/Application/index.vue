@@ -11,7 +11,7 @@
         <a-button type="primary" @click="addVisible=true">新增自定义应用</a-button>
         <a-button>
           <template #icon>
-            <setting-outlined />
+            <setting-outlined @click=""/>
           </template>
         </a-button>
       </div>
@@ -26,7 +26,7 @@
 <script setup lang='ts'>
 import { reactive, ref, toRefs,toRef,computed } from '@vue/reactivity'
 import { onMounted, watchEffect } from '@vue/runtime-core'
-import {Input as aInput,Button as aButton }  from 'ant-design-vue'
+import {Input as aInput,Button as aButton,Popover }  from 'ant-design-vue'
 import {SearchOutlined,SettingOutlined} from '@ant-design/icons-vue'
 import card from './card.vue'
 import {selectAppliction} from '@/serve/application'

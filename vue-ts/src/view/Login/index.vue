@@ -6,7 +6,7 @@
         </div>
         <a-input :style="inputStyle" v-model:value="loginMes.username"></a-input>
         <input-password :style="inputStyle" v-model:value="loginMes.password"></input-password>
-        <a-button :style="inputStyle" type="primary" @click="gotoApp">登录</a-button>
+        <a-button :style="inputStyle" type="primary" @click="gotoApp" class="login-btn">登录</a-button>
       </div>
     
   </div>
@@ -16,13 +16,10 @@ import { reactive } from 'vue'
 import { useRouter } from 'vue-router'
 import { Input as aInput,InputPassword,Button as aButton } from 'ant-design-vue';
 import {login} from '@/serve/login'
+import { onMounted,onUnmounted } from '@vue/runtime-core'
 interface loginMes{
   username:string,
   password:string
-}
-interface resType{
-  code:number,
-  message:string
 }
 
 const router = useRouter()
@@ -34,7 +31,7 @@ const loginMes=reactive<loginMes>({
   username: '',
   password: ''
 })
-
+// 登录
 async function gotoApp(){
   const data =await login(loginMes)
   if(data.code===200){
@@ -42,6 +39,22 @@ async function gotoApp(){
   }
     
 }
+// enter键盘登录
+const addEvent=()=>{
+ document.onkeyup=function(event){
+  var e = event || window.event || arguments.callee.caller.arguments[0];
+  if(e && e.keyCode==13){ // enter 键
+    gotoApp()
+  }
+ }
+}
+onMounted(() => {
+  addEvent()
+})
+onUnmounted(()=>{
+  document.onkeyup=function(){}
+  console.log('注销')
+})
 
 </script>
 <style lang="less" scoped>

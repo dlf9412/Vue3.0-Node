@@ -1,6 +1,7 @@
 <template>
   <div>
-    <a-modal :visible='visible' title="新增自定义应用" @cancel='close'>
+    <a-modal :visible='visible' title="新增自定义应用" @cancel='close' ok-text="确认"
+      cancel-text="取消">
       <a-form :model="formState" name="formState">
         <form-item v-for="(item, i) in addFromItem" :key="i" v-bind="item.attr">
           <component :is='item.type' v-model:value="formState[item.componentBind.model]" @change="changeVal"
